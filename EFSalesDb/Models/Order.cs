@@ -18,6 +18,7 @@ namespace EFSalesDb.Models
         public string Description { get; set; }
 // virtual to properties means this property is not in the db but in the class
         public virtual Customer Customer { get; set; }
+// this is a way to attach a collection of orderlines to the Order
         public virtual ICollection<OrderLine> OrderLines { get; set; }
     }
 }

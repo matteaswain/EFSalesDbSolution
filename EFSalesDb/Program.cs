@@ -20,23 +20,28 @@ namespace EFSalesDb
                 .ToList(); // return data in list
 
 // INSERT NEW CUSTOMER
-            var newCustomer = new Customer()
-            {
-                Name = "TQL", City = "Cincinnati", State = "OH", Sales = 4000000, Active = true
-            };
+            //var newCustomer = new Customer()
+            //{
+            //    Name = "TQL", City = "Cincinnati", State = "OH", Sales = 4000000, Active = true
+            //};
 
-            //context.Customers.Add(newCustomer); // 
-            //var rowsAffected = context.SaveChanges(); // saveschanges actually commits the actions
+            ////context.Customers.Add(newCustomer); // 
+            ////var rowsAffected = context.SaveChanges(); // saveschanges actually commits the actions
 
-            // UPDATING BY PK
-            var tql = context.Customers.Find(36); // read the record
-            tql.Name = "Total Quality Logistics"; // what changes you want 
+            //// UPDATING BY PK
+            //var tql = context.Customers.Find(36); // read the record
+            //tql.Name = "Total Quality Logistics"; // what changes you want 
 
-            var rowsAffected = context.SaveChanges();// return 
+            //var rowsAffected = context.SaveChanges();// return 
 
-            tql = context.Customers.Find(36); // read the data
-            context.Customers.Remove(tql); // deletes the row (what you want to delete goes in here) 
-            rowsAffected = context.SaveChanges(); // returns rows affected and saves changes 
+            //tql = context.Customers.Find(36); // read the data
+            //context.Customers.Remove(tql); // deletes the row (what you want to delete goes in here) 
+            //rowsAffected = context.SaveChanges(); // returns rows affected and saves changes 
+
+
+
+
+            var orders = context.Orders.ToList(); // viewing all the order data with customer 
         }
 
 
